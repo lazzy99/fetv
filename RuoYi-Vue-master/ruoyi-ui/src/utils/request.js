@@ -23,6 +23,7 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(config => {
   // 是否需要设置 token
+  console.log(config.url)
   const isToken = (config.headers || {}).isToken === false
   // 是否需要防止数据重复提交
   const isRepeatSubmit = (config.headers || {}).repeatSubmit === false
@@ -32,6 +33,7 @@ service.interceptors.request.use(config => {
   // get请求映射params参数
   if (config.method === 'get' && config.params) {
     let url = config.url + '?' + tansParams(config.params);
+
     url = url.slice(0, -1);
     config.params = {};
     config.url = url;

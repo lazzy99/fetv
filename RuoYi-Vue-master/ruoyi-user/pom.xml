@@ -9,25 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ruoyi-system</artifactId>
+    <artifactId>ruoyi-user</artifactId>
 
-    <description>
-        system系统模块
-    </description>
-
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
     <dependencies>
-
         <!-- 通用工具-->
         <dependency>
             <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-common</artifactId>
         </dependency>
-        <!--        lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-        </dependency>
     </dependencies>
-
 </project>
